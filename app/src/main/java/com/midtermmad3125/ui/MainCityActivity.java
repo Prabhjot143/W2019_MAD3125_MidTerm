@@ -36,7 +36,7 @@ public class MainCityActivity extends AppCompatActivity
         lat.setText(newCity.getLat());
         lon.setText(newCity.getLon());
         population.setText("Population: "+newCity.getPopulation());
-//commit
+
 
 
     }
