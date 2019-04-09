@@ -22,6 +22,8 @@ public class MainCityActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        parseJson();
+
     }
     public void parseJson() {
         Log.e(TAG,"Into Parse JSon");
