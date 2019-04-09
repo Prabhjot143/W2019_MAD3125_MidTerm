@@ -1,5 +1,6 @@
 package com.midtermmad3125.ui;
 
+import android.content.Intent;
 import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,14 +36,16 @@ public class MainCityActivity extends AppCompatActivity
         lat.setText(newCity.getLat());
         lon.setText(newCity.getLon());
         population.setText("Population: "+newCity.getPopulation());
+        Intent Intent = new Intent(MainCityActivity.this,WeatherDetailsActivity.class);
+        startActivity(Intent);
+
 
     }
-    Ientent intent = new intent
+
 
     public void parseJson() {
         Log.e(TAG,"Into Parse JSon");
         String jsonString = ReadJSONUtils.loadJSONFromAsset(this, "moscow_weather.json");
-
         if (!jsonString.isEmpty()) {
 
             try {
