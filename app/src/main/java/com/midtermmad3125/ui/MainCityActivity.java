@@ -4,6 +4,7 @@ import android.nfc.Tag;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import com.midtermmad3125.R;
 import com.midtermmad3125.utils.ReadJSONUtils;
@@ -25,8 +26,19 @@ public class MainCityActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         parseJson();
+        City newCity = cityList.get(0);
+        TextView cityName = findViewById(R.id.txtCityName);
+        TextView lat = findViewById(R.id.txtLat);
+        TextView lon = findViewById(R.id.txtLon);
+        TextView population = findViewById(R.id.txtPopulation);
+        cityName.setText(newCity.getName());
+        lat.setText(newCity.getLat());
+        lon.setText(newCity.getLon());
+        population.setText("Population: "+newCity.getPopulation());
 
     }
+    public void
+
     public void parseJson() {
         Log.e(TAG,"Into Parse JSon");
         String jsonString = ReadJSONUtils.loadJSONFromAsset(this, "moscow_weather.json");
