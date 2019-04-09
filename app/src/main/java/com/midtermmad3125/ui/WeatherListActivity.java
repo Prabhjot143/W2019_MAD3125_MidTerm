@@ -14,4 +14,5 @@ public class WeatherListActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_weather_list);
     }
+
 }
