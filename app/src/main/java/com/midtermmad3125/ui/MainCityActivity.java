@@ -36,8 +36,7 @@ public class MainCityActivity extends AppCompatActivity
         lat.setText(newCity.getLat());
         lon.setText(newCity.getLon());
         population.setText("Population: "+newCity.getPopulation());
-        Intent Intent = new Intent(MainCityActivity.this,WeatherDetailsActivity.class);
-        startActivity(Intent);
+
 
 
     }
