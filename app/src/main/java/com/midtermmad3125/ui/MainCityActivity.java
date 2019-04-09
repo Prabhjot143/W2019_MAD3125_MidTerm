@@ -12,11 +12,13 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+
 public class MainCityActivity extends AppCompatActivity
 {
 
     private static final String TAG = "MyApp";
-
+    ArrayList<City> cityList = new ArrayList<City>();
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -47,6 +49,8 @@ public class MainCityActivity extends AppCompatActivity
                 //Data of City
                 String country = mCity.getString("country");
                 int population  = mCity.getInt("population");
+                City c = new City(id,name,lon,lat,country,population);
+                cityList.add(c);
                 //City Count
                 int mCnt = mJsonWeather.getInt("cnt");
                 //City List
