@@ -37,7 +37,7 @@ public class MainCityActivity extends AppCompatActivity
         population.setText("Population: "+newCity.getPopulation());
 
     }
-    public void
+    Ientent intent = new intent
 
     public void parseJson() {
         Log.e(TAG,"Into Parse JSon");
